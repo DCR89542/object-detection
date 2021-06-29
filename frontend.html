@@ -2,14 +2,14 @@
 <body>
 <h1 align="center"><b><U> Object Detection</U> </b></h1>
 
-<form>
+<form method="post" action="upload.php" enctype='multipart/form-data'>
 
 <p>Input Image</p>
 <canvas id = "myCanvas" style="margin:auto;height:300px; border: 1px solid #c3c3c3;"> 
 </canvas>
 
 <p>
-Chose the Image  : <input type="file" multiple="false" accept="image/*" id="imageInput" >
+Chose the Image  : <input type="file" multiple="false" accept="image/*" id="imageInput" name="imageInput" >
 </p>
 
 <script>
@@ -36,21 +36,10 @@ Chose the Image  : <input type="file" multiple="false" accept="image/*" id="imag
 </script>
 
 <p>
-<input type="button" value="Detect Objects" onclick="detectobjects()" > &nbsp &nbsp
+<input type="submit" value="Detect" name="detect" id="detect"> &nbsp &nbsp
 <input type="button" value="Clear Canvas" onclick="clearCanvas()" >
 </p>
 
-
-<p>Output Image</p>
-<canvas id = "fgcan1" style="margin:auto;height:300px; border: 1px solid #c3c3c3;"> 
-</canvas>
-<br>
-<br>
-<label >Output Image Details</label>
-<br>
-<br>
-<textarea id="otdetails" name="otdetails" rows="4" cols="50">
-</textarea>
 </form>
 
 </body>
